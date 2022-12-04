@@ -55,10 +55,6 @@ __forceinline std::vector<section> compare_sections(std::vector<section> section
     return result;
 }
 
-/// <summary>
-/// checks .text integrity.
-/// </summary>
-/// <returns>returns true if everything is right, else false.</returns>
 __forceinline bool check_integrity(std::vector<section> _cached)
 {
     const std::vector<section> sections = compare_sections(_cached, get_sections());
@@ -66,7 +62,6 @@ __forceinline bool check_integrity(std::vector<section> _cached)
     {
         std::string name(reinterpret_cast<char const*>(section.name));
         if (name == ".text")
-            return false;
-        return true;
+            std::cout << ".text section changed.\n";
     }
 }
