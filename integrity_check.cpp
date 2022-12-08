@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <Windows.h>
 #include <nmmintrin.h>
@@ -60,12 +61,3 @@ typedef struct _integrity_check
         return (!(_cached == section2));
     }
 };
-
-
-
-
-int main()
-{
-    _integrity_check check;
-    check.check_integrity();
-}
