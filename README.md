@@ -1,8 +1,11 @@
-# integrity-check
-Small and simple C++ integrity check / memory checksum.
+# .text Integrity Check
+> Small and simple C++ integrity check / memory checksum.
+> Just include the header 
 
-Example:
 
+### Example : 
+
+```
 int main()  {
     _integrity_check check;
 
@@ -10,3 +13,4 @@ int main()  {
         std::cout << std::boolalpha << check.check_integrity() << std::endl;
     }
 }
+```
